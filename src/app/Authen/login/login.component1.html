@@ -1,0 +1,61 @@
+<div id="container">
+  <div class="box">
+    <div class="col-lg-12 shadow-lg border p-5 rounded">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <img
+            src="https://raw.githubusercontent.com/Coyaks/login_material_design/master/img/skoy_color.png"
+            width="20%"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h4 class="text-center">Connexion</h4>
+          <alert></alert>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="username"
+                placeholder="Utilisateur"
+                [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+              />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+              <input
+                type="password"
+                matInput
+                placeholder="Mot de passe"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+              />
+            </mat-form-field>
+            <mat-card-actions>
+              <div class="button-flex-container">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  [disabled]="loading"
+                  class="btn btn-primary"
+                >
+                  <span
+                    *ngIf="loading"
+                    class="spinner-border spinner-border-sm mr-1"
+                  ></span>
+                  Se connecter
+                </button>
+                <a routerLink="/register" class="btn btn-link">Inscription</a>
+              </div>
+            </mat-card-actions>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

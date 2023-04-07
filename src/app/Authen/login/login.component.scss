@@ -1,0 +1,14 @@
+#container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* make main-axis vertical */
+  justify-content: center; /* align items vertically, in this case */
+  align-items: center; /* align items horizontally, in this case */
+  height: 100vh; /* for demo purposes */
+  //border: 1px solid black; /* for demo purposes */
+  background-color: #eee; /* for demo purposes */
+}
+
+.box {
+  width: 65%;
+  text-align: center;
+}
